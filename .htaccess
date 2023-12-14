@@ -1,0 +1,6 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+# If the requested URL points to an existing HTML file, serve it
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(index|price)\.html$ /$1.php [NC,L]
